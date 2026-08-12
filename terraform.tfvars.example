@@ -1,0 +1,17 @@
+aws_region   = "ap-south-1"
+project_name = "portfolio-aws-platform"
+environment  = "portfolio"
+
+# Use an environment variable instead of putting a real password here:
+# export TF_VAR_db_password='use-a-secret-manager-or-ci-secret'
+
+instance_type     = "t3.micro"
+min_size          = 2
+max_size          = 4
+db_instance_class = "db.t4g.micro"
+redis_node_type   = "cache.t4g.micro"
+
+# Keep optional expensive components disabled for a portfolio demo.
+enable_media_lambda = false
+enable_analytics    = false
+
